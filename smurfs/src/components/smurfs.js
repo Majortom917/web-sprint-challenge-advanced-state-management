@@ -4,18 +4,18 @@ import { getSmurfs} from '../actions/actions';
 import Smurf from './smurf'
 
 
-const SmurfList = props => {
-
+const SmurfList = ({getSmurfs, isLoading, smurfs}) => {
+    //{getSmurfs, isLoading, smurfs}=props
     useEffect(() => {
-        props.getSmurfs()
+        getSmurfs()
     }, [])
 
     return (
         <div>
-            <h2>Smurf List</h2>
-            {props.isLoading ? <p>Loading Data...</p> : null}
-            {props.smurfs.length > 0 && props.smurfs.map(smurf => (
-                <Smurf smurf={smurf}/> 
+            <h2>Smurf List of Smurfyness</h2>
+            {isLoading ? <p>Loading Data...</p> : null}
+            {smurfs.length > 0 && smurfs.map(each_smurf => (
+                <Smurf smurf={each_smurf}/> 
             ))}
         </div>
     )

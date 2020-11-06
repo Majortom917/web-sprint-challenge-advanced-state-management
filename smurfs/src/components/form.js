@@ -22,7 +22,7 @@ const SmurfForm = (props) => {
 
     return (
         <form onSubmit={onSubmit}>
-            <h2>Smurf Form</h2>
+            <h2>Build a Smurf!!</h2>
             <label>
                 Name:
                 <input 
@@ -53,7 +53,7 @@ const SmurfForm = (props) => {
                 />
             </label>
            
-            <button>Add your smurf</button>
+            <button>Add your smurf to the Lexicon</button>
         </form>
     )
 }

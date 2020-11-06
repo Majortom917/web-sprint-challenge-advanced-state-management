@@ -1,35 +1,44 @@
+import {
+    GET_SMURFS_SUCCESS,
+    GET_SMURFS_FAILURE,
+    POST_SMURFS_SUCCESS,
+    POST_SMURFS_FAILURE
+}from '../actions/actions'
 
 const initialState = {
+    smurf: {
+        name: '',
+        age: '',
+        height: '',
+        error: '',
+    },
     smurfs: [],
-    error:'',
-    isFetching: false,
 }
 
 export const reducer = (state = initialState, action) => {
-    switch(action.type){
-        case FETCH_SMURF_START:
-            return{
+    switch(action.type) {
+        case GET_SMURFS_SUCCESS:
+            return {
                 ...state,
-                error:'',
-                isFetching: true,
+                smurfs: action.payload,
+                smurf: action.payload,
             }
-        case FETCH_SMURF_SUCCESS:
-            console.log(action.payload)
-            console.log(action.payload.length)
-            return{
+        case GET_SMURFS_FAILURE:
+            return {
                 ...state,
-                error:'',
-                isFetching: false,
-                smurfs: action.payload
+                error: action.payload,
             }
-        case FETCH_SMURF_FAILURE:
-            return{
+         case POST_SMURFS_SUCCESS:
+             return {
+                 ...state,
+                 smurfs: state.smurfs,
+              }
+        case POST_SMURFS_FAILURE:
+            return {
                 ...state,
-                error:action.payload,
-                isFetching: false,
-            }
+                error: action.payload,
+            }    
         default:
-            return state;
+            return state
     }
-
-}
+} 

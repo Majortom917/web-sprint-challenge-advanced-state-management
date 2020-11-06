@@ -32,8 +32,7 @@ const SmurfForm = (props) => {
                     onChange={onChange}
                 />
             </label>
-            <br></br>
-            <br></br>
+
             <label>
                 Age:
                 <input 
@@ -43,8 +42,7 @@ const SmurfForm = (props) => {
                     onChange={onChange}
                 />
             </label>
-            <br></br>
-            <br></br>
+            
             <label>
                 Height:
                 <input 
@@ -54,8 +52,7 @@ const SmurfForm = (props) => {
                     onChange={onChange}
                 />
             </label>
-            <br></br>
-            <br></br>
+           
             <button>Add your smurf</button>
         </form>
     )

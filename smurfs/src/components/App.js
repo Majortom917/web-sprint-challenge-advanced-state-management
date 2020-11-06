@@ -4,15 +4,13 @@ import SmurfList from './smurfs'
 import SmurfForm from './form'
 
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <SmurfForm/>
-        <SmurfList/>
-      </div>
-    );
-  }
+const App = () => {
+  return (
+    <div className="App">
+      <SmurfForm/>
+      <SmurfList/>
+    </div>
+  );
 }
 
 export default App;

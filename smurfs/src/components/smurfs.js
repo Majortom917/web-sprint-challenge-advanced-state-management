@@ -5,15 +5,16 @@ import Smurf from './smurf'
 
 
 const SmurfList = props => {
+
     useEffect(() => {
         props.getSmurfs()
     }, [])
 
     return (
         <div>
-            <h2>Smurfs</h2>
-            <p>{props.error}</p>
-            {props.smurf.map((smurf) => (
+            <h2>Smurf List</h2>
+            {props.isLoading ? <p>Loading Data...</p> : null}
+            {props.smurfs.length > 0 && props.smurfs.map(smurf => (
                 <Smurf smurf={smurf}/> 
             ))}
         </div>

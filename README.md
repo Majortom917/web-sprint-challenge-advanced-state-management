@@ -40,9 +40,13 @@ application state is a broad store of state, and component state is only useful 
 
 thunk returns action creators as functions not objects. the functions recieve the dispatch and carry out the synchronous actions after the async have been completed
 
+()=> {
+ bar()
+}
+
 5. What is your favorite state management system you've learned and this sprint? Please explain why!
 
-I don't relly have one....head....still...spinning
+context api, it is less messy than redux and accomplishes the same things for what I am working on.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
